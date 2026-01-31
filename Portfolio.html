@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Code Apogé : 24001728 -->
+    <meta name="author" content="Ali Chellat" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoChase.ma</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <button id="theme-toggle" class="toggle-btn">🌙</button>
+
+      <header>
+        <div class="profile-img">
+          <img src="assets/igpfp.jpg" />
+        </div>
+        <h1>AutoChase.ma</h1>
+        <p class="tagline">Software Engineer | Automotive Photographer</p>
+      </header>
+
+      <main class="links">
+        <a
+          href="https://www.instagram.com/autochase.ma/#"
+          target="_blank"
+          class="link-card"
+          >📸 View Portfolio</a
+        >
+        <a
+          href="https://www.linkedin.com/in/ali-chellat-59602a360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          class="link-card"
+          >💻 LinkedIn Profile</a
+        >
+
+        <div class="contact-container">
+          <button id="contact-btn" class="link-card highlight">
+            ✉️ Contact Me
+          </button>
+          <div id="contact-options" class="contact-options hidden">
+            <a
+              href="https://wa.me/212776737488"
+              target="_blank"
+              class="sub-link"
+              >WhatsApp</a
+            >
+            <a href="mailto:autochase.ma@gmail.com" class="sub-link">Email</a>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Based in Rabat, Morocco</p>
+      </footer>
+    </div>
+    <script lang="javascript">
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+      const contactBtn = document.getElementById("contact-btn");
+      const contactOptions = document.getElementById("contact-options");
+
+      // 1. Theme Toggle (Simple Version)
+      themeToggle.onclick = function () {
+        body.classList.toggle("dark-theme");
+
+        if (body.classList.contains("dark-theme")) {
+          themeToggle.textContent = "☀️";
+        } else {
+          themeToggle.textContent = "🌙";
+        }
+      };
+
+      // 2. Contact Toggle (Simple Version)
+      contactBtn.onclick = function () {
+        contactOptions.classList.toggle("hidden");
+
+        if (contactOptions.classList.contains("hidden")) {
+          contactBtn.textContent = "✉️ Contact Me";
+        } else {
+          contactBtn.textContent = "❌ Close Options";
+        }
+      };
+    </script>
+  </body>
+</html>
